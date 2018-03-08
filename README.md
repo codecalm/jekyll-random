@@ -1,10 +1,8 @@
 # Jekyll-Random
 
-Jekyll plugin that generates pseudo-random data. Very useful when you want to generate a large amount of random data. 
+A Jekyll plugin that generates _pseudo-random_ data. Very useful when you want to generate a large amount of random data. The plugin is prepared to work with other Jekyll plugins like `jekyll-timeago` or `jekyll-humanize`.
 
-The data is generated based on index, so that every time when you run `jekyll build`, the generated data is the same. 
-
-The plugin is prepared to work with other Jekyll plugins like `jekyll-timeago` or `jekyll-humanize`.
+**The data is generated based on index, so that every time when you run `jekyll build`, the generated data is the same.**
 
 ## Installation
 
