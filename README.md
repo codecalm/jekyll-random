@@ -254,7 +254,7 @@ Any kind of feedback, bug report, idea or enhancement are really appreciated. To
 
 ## License
 
-Copyright (c) Marc Anguera. Jekyll-Timeago is released under the MIT License.
+Copyright (c) Paweł Kuna. Jekyll-Random is released under the MIT License.
 
 ## Contribute
 
