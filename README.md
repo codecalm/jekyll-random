@@ -17,7 +17,7 @@ Each of the methods in the file presents an available Fluid type filter to be us
 
 Return a number between _min_ and _max_ based on _index_. By default it returns a number between 0 and 100.
 
-```
+```ruby
 {% for i in (1..100) %}
   {{ i }} - {{ forloop.index | random_number: 0, 10 }}
 {% endfor %}
@@ -38,7 +38,7 @@ The code above returns random numbers like:
 
 You can also change the `round` parameter to generate fractions:
 
-```
+```ruby
 {% for i in (1..100) %}
   {{ i }} - {{ forloop.index | random_number: 0, 100, 2 }}
 {% endfor %}
@@ -61,7 +61,7 @@ The result of code above:
 
 Return random item from _items_ array based on _index_. _items_ can be array, collection, or data file. 
 
-```
+```ruby
 {% assign colors = 'red|green|blue|yellow|orange' | split: '|' %}
 {% for i in (1..100) %}
   {{ i }} - {{ forloop.index | random_item: colors }}
@@ -86,7 +86,7 @@ The results:
 
 Return random date between _start_date_ and _end_date_. By default, it returns the date between 100 days ago and now. Returned date you can format by `date` filter to get expected result. This filter is useful when you generate birth date or register date. 
 
-```
+```ruby
 {% for i in (1..100) %}
   {{ i }} - {{ forloop.index | random_date: "2010-01-01", "2018-01-01" | date: '%B %d, %Y' }}
 {% endfor %}
@@ -107,7 +107,7 @@ Return random date between _start_date_ and _end_date_. By default, it returns t
 
 This filter works similar to `random_date`, but returns random date between today and date _days_ago_ ago. By default return date between now and 100 days ago. It is helpful to generate random data like last login date. If you additionally use the `jekyll-timeago` filter you can get date in _2 days ago_ format.
 
-```
+```ruby
 {% for i in (1..100) %}
   {{ i }} - {{ forloop.index | random_date_ago: 10 | timeago }}
 {% endfor %}
@@ -145,7 +145,7 @@ You can also change _days_ago_ parameter to negative number like `{{ forloop.ind
 
 Sometimes you want to generate data in the same row with the same parameters. Because this plugin generate pseudo-random data every returned number will be the same:
 
-```
+```ruby
 {% for i in (1..5) %}
   {{ i }} - {{ forloop.index | random_number }}, {{ forloop.index | random_number }}, {{ forloop.index | random_number }}
 {% endfor %}
