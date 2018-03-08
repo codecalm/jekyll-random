@@ -177,7 +177,7 @@ To fix it, simply add a random number to `index` parameter: `{{ forloop.index | 
 
 To see how useful this plugin is, try to run the code below. Remember to set few random data in `_config.yml` file:
 
-```
+```yml
 users:
   - name: Tate
     surname: Nesfield
@@ -195,7 +195,7 @@ commits:
 
 _index.html_
 
-```
+```html
 {% assign colors = 'red|green|blue|yellow|orange' | split: '|' %}
 <table>
     <tr>
