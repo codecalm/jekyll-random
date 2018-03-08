@@ -1,9 +1,13 @@
 module Jekyll
    module RandomFilter
 
-      def random_number(value, max=100, min=0, offset=0, round=0)
-         formatter = round ? '%.' + round.to_s + 'f' : '%'
-         value = formatter % ((Math.sin(Math.sin(value + offset)) + 1) * ((max - min) / 2) + min)
+      def random_number(x, min=0, max=100, round=0)
+         value = ((x * Math::PI * Math::E * max + (Math.sin(x/max) * max)) % (max - min)) + min
+         if round != 0
+           value = (('%.' + round.to_s + 'f') % value).to_f
+         else
+           value = value.round
+         end
 
          value
       end
