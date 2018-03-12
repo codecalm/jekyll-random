@@ -9,7 +9,24 @@ A Jekyll plugin that generates _pseudo-random_ data. Very useful when you want t
 
 ## Installation
 
-Simply download the `random.rb` file and place it in the `_plugins` directory of your Jekyll site.
+1. Add the following to your site's `Gemfile`:
+
+  ```ruby
+  gem 'jekyll-random'
+  ```
+
+2. Add the following to your site's `_config.yml`:
+
+  ```yml
+  plugins:
+    - jekyll-random
+  ```
+
+If you are using a Jekyll version less than `3.5.0`, use the `gems` key instead of `plugins`.
+
+### Manual installation
+
+Simply download the `lib/jekyll-random.rb` file and place it in the `_plugins` directory of your Jekyll site.
 
 
 ## Usage
