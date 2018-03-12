@@ -1,3 +1,5 @@
+require "jekyll"
+
 module Jekyll
    module RandomFilter
 

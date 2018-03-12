@@ -4,6 +4,9 @@ A Jekyll plugin that generates _pseudo-random_ data. Very useful when you want t
 
 **The data is generated based on index, so that every time when you run `jekyll build`, the generated data is the same.**
 
+[![Gem Version](https://badge.fury.io/rb/jekyll-random.svg)](https://badge.fury.io/rb/jekyll-random)
+
+
 ## Installation
 
 Simply download the `random.rb` file and place it in the `_plugins` directory of your Jekyll site.
