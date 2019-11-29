@@ -4,7 +4,10 @@ module Jekyll
    module RandomFilter
 
       def random_number(x, min=0, max=100, round=0)
-         value = ((x * x * Math::PI * Math::E * max * (Math.sin(x) / Math.cos(x * x)) ) % (max - min - 1)) + min
+         value = ((x * x * Math::PI * Math::E * (max + 1) * (Math.sin(x) / Math.cos(x * x)) ) % (max + 1 - min)) + min
+
+         value = value > max ? max : value
+         value = value < min ? min : value
 
          if round != 0
            value = (('%.' + round.to_s + 'f') % value)
@@ -30,8 +33,7 @@ module Jekyll
 
       def random_date_ago(x, days_ago=100)
          Date.today.prev_day(random_number(x, 0, days_ago))
-	  end
-
+	    end
    end
 end
 
